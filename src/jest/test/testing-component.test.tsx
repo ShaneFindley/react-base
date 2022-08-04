@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import TestingComponent from "./testing-component";
+import TestingComponent from "../testing-component";
 
 
 it('changes the class when hovered', () => {

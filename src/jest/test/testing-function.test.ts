@@ -1,5 +1,5 @@
-import TestingFunctions from "./testing-functions"
-import { IPushedTransactions } from "./types"
+import TestingFunctions from "../testing-functions"
+import { IPushedTransactions } from "../types"
 
 describe('product-dashboard-utils', () => {
     describe('groupTransactions', () => {
