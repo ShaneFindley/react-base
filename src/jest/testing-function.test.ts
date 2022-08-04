@@ -1,18 +1,18 @@
-import ProductDashboardUtils from "./testing-function"
+import TestingFunctions from "./testing-functions"
 import { IPushedTransactions } from "./types"
 
 describe('product-dashboard-utils', () => {
     describe('groupTransactions', () => {
         it('should handle an empty list of transactions.', () => {
-            expect(() => ProductDashboardUtils.groupTransactions(null as any)).not.toThrow()
+            expect(() => TestingFunctions.groupTransactions(null as any)).not.toThrow()
         })
 
         it('should handle an empty list of transactions.', () => {
-            expect(() => ProductDashboardUtils.groupTransactions([])).not.toThrow()
+            expect(() => TestingFunctions.groupTransactions([])).not.toThrow()
         })
 
         it('should handle a new transaction.', () => {
-            const result = ProductDashboardUtils.groupTransactions([{
+            const result = TestingFunctions.groupTransactions([{
                 grossPrice: 1,
                 id: 'test',
                 productId: '1234',
@@ -35,7 +35,7 @@ describe('product-dashboard-utils', () => {
         })
 
         it('should handle a transaction of multiple items.', () => {
-            const result = ProductDashboardUtils.groupTransactions([{
+            const result = TestingFunctions.groupTransactions([{
                 grossPrice: 1,
                 id: 'test 1',
                 productId: '1234',
@@ -72,7 +72,7 @@ describe('product-dashboard-utils', () => {
         })
 
         it('should split different transactions accross two grouped transactions', () => {
-            const result = ProductDashboardUtils.groupTransactions([{
+            const result = TestingFunctions.groupTransactions([{
                 grossPrice: 1,
                 id: 'test 1',
                 productId: '1234',
@@ -115,7 +115,7 @@ describe('product-dashboard-utils', () => {
         })
 
         it('should do group a list of ordered transactions.', () => {
-            const result = ProductDashboardUtils.groupTransactions([{
+            const result = TestingFunctions.groupTransactions([{
                 grossPrice: 1,
                 id: 'test 1',
                 productId: '1234',
@@ -168,7 +168,7 @@ describe('product-dashboard-utils', () => {
         })
 
         it('should do group a list of unordered transactions.', () => {
-            const result = ProductDashboardUtils.groupTransactions([
+            const result = TestingFunctions.groupTransactions([
                 {
                     grossPrice: 5,
                     id: 'test 5',
@@ -225,12 +225,12 @@ describe('product-dashboard-utils', () => {
 
     describe('mapTransactions', () => {
         it('should return an empty array when no data is sent.', () => {
-            const result = ProductDashboardUtils.mapTransactions(undefined)
+            const result = TestingFunctions.mapTransactions(undefined)
             expect(result.length).toEqual(0)
         })
 
         it('should return an empty array when no data is sent.', () => {
-            const result = ProductDashboardUtils.mapTransactions(
+            const result = TestingFunctions.mapTransactions(
                 {
                     transactions: [
                         {
@@ -254,7 +254,7 @@ describe('product-dashboard-utils', () => {
 
     describe('mergeGroupedTransactions', () => {
         it('should insert a later transaction before the current transactions.', () => {
-            const result = ProductDashboardUtils.mergeGroupedTransactions([
+            const result = TestingFunctions.mergeGroupedTransactions([
                 {
                     alias: 'alias-1',
                     comparisonDate: 1664838000000,
@@ -280,7 +280,7 @@ describe('product-dashboard-utils', () => {
         })
     
         it('should insert an earlier transaction after the current transactions.', () => {
-            const result = ProductDashboardUtils.mergeGroupedTransactions([
+            const result = TestingFunctions.mergeGroupedTransactions([
                 {
                     alias: 'alias-1',
                     comparisonDate: 1664838000001,
@@ -307,7 +307,7 @@ describe('product-dashboard-utils', () => {
         })
     
         it('should insert an transaction between the current transactions.', () => {
-            const result = ProductDashboardUtils.mergeGroupedTransactions([
+            const result = TestingFunctions.mergeGroupedTransactions([
                 {
                     alias: 'alias-1',
                     comparisonDate: 1664838000002,
@@ -342,7 +342,7 @@ describe('product-dashboard-utils', () => {
         })
     
         it('should return just the specified number of entries', () => {
-            const result = ProductDashboardUtils.mergeGroupedTransactions([
+            const result = TestingFunctions.mergeGroupedTransactions([
                 {
                     alias: 'alias-1',
                     comparisonDate: 1664838000002,

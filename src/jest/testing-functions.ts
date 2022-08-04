@@ -1,6 +1,5 @@
 import { format } from 'date-fns';
 import orderBy from 'lodash/orderBy';
-// import { v4 } from 'uuid';
 import { randomUUID } from 'crypto';
 
 import { IGroupedTransactions, ITransaction, IPushedTransactions } from './types';
