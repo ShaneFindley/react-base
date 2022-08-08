@@ -1,5 +1,5 @@
 import { renderHook } from "@testing-library/react";
-import { useTestingMock } from "./testing-mock";
+import { useTestingMock } from "../testing-mock";
 
 jest.mock('axios-hooks');
 import mockFn from 'axios-hooks';
