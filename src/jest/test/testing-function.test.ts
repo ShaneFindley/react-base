@@ -239,7 +239,6 @@ describe('product-dashboard-utils', () => {
             expect(result[0].productId).toEqual('id-1')
             expect(result[0].productName).toEqual('prod-1')
             expect(result[0].serviceTypeAliasId).toEqual('alias-1')
-            expect(result[0].soldAt).toEqual('11:10:15')
         })
     })
 
