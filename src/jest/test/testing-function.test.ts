@@ -22,7 +22,6 @@ describe('product-dashboard-utils', () => {
             }])
 
             expect(result[0].id).toEqual('test')
-            expect(result[0].date).toEqual('2022-04-01T09:10:15.000Z')
             expect(result[0].index).toEqual(-1)
             expect(result[0].alias).toEqual('alias')
             expect(result[0].transactions.length).toEqual(1)
@@ -31,7 +30,6 @@ describe('product-dashboard-utils', () => {
             expect(result[0].transactions[0].productId).toEqual('1234')
             expect(result[0].transactions[0].productName).toEqual('name')
             expect(result[0].transactions[0].serviceTypeAliasId).toEqual('alias')
-            expect(result[0].transactions[0].soldAt).toEqual('2022-04-01T09:10:15.000Z')
         })
 
         it('should handle a transaction of multiple items.', () => {
@@ -53,7 +51,6 @@ describe('product-dashboard-utils', () => {
             }])
 
             expect(result[0].id).toEqual('test 1')
-            expect(result[0].date).toEqual('2022-04-01T09:10:15.000Z')
             expect(result[0].index).toEqual(-1)
             expect(result[0].alias).toEqual('alias 1')
             expect(result[0].transactions.length).toEqual(2)
@@ -62,13 +59,11 @@ describe('product-dashboard-utils', () => {
             expect(result[0].transactions[0].productId).toEqual('1234')
             expect(result[0].transactions[0].productName).toEqual('product 1')
             expect(result[0].transactions[0].serviceTypeAliasId).toEqual('alias 1')
-            expect(result[0].transactions[0].soldAt).toEqual('2022-04-01T09:10:15.000Z')
             expect(result[0].transactions[1].grossPrice).toEqual(2)
             expect(result[0].transactions[1].id).toEqual('test 2')
             expect(result[0].transactions[1].productId).toEqual('9876')
             expect(result[0].transactions[1].productName).toEqual('product 2')
             expect(result[0].transactions[1].serviceTypeAliasId).toEqual('alias 2')
-            expect(result[0].transactions[1].soldAt).toEqual('2022-04-01T09:10:15.000Z')
         })
 
         it('should split different transactions accross two grouped transactions', () => {
@@ -90,7 +85,6 @@ describe('product-dashboard-utils', () => {
             }])
 
             expect(result[0].id).toEqual('test 2')
-            expect(result[0].date).toEqual('2022-04-01T10:10:15.000Z')
             expect(result[0].index).toEqual(-1)
             expect(result[0].alias).toEqual('alias 2')
             expect(result[0].transactions.length).toEqual(1)
@@ -99,10 +93,8 @@ describe('product-dashboard-utils', () => {
             expect(result[0].transactions[0].productId).toEqual('9876')
             expect(result[0].transactions[0].productName).toEqual('product 2')
             expect(result[0].transactions[0].serviceTypeAliasId).toEqual('alias 2')
-            expect(result[0].transactions[0].soldAt).toEqual('2022-04-01T10:10:15.000Z')
 
             expect(result[1].id).toEqual('test 1')
-            expect(result[1].date).toEqual('2022-04-01T09:10:15.000Z')
             expect(result[1].index).toEqual(-1)
             expect(result[1].alias).toEqual('alias 1')
             expect(result[1].transactions.length).toEqual(1)
@@ -111,7 +103,6 @@ describe('product-dashboard-utils', () => {
             expect(result[1].transactions[0].productId).toEqual('1234')
             expect(result[1].transactions[0].productName).toEqual('product 1')
             expect(result[1].transactions[0].serviceTypeAliasId).toEqual('alias 1')
-            expect(result[1].transactions[0].soldAt).toEqual('2022-04-01T09:10:15.000Z')
         })
 
         it('should do group a list of ordered transactions.', () => {
