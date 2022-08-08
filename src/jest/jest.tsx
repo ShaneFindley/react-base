@@ -1,7 +1,7 @@
-import { Button, Container, Paper, Typography } from "@mui/material";
+import { Button, Container, Typography } from "@mui/material";
 import Heading from "../common/heading/heading";
 
-import image from './logo.svg';
+import image from './logo.png';
 
 export default function Jest() {
     return <Container style={{ paddingTop: 10 }}>
