@@ -9,7 +9,7 @@ Jest has a number of related dependencies which are required to create a working
 
 > npm i --save-dev jest babel-jest
 
->npm i --save-dev ts-node @babel/preset-typescript ts-jest @types/jest
+> npm i --save-dev ts-node @babel/preset-typescript ts-jest @types/jest
 
 > npm i --save-dev @testing-library/jest-dom @testing-library/react @testing-library/user-event jest-resolve jest-watch-typeahead
 
@@ -23,6 +23,3 @@ For running tests against react we need to use jsdom as the test environment, th
 jest.config.ts will also need to be updated to use jsdom as the testing environment.
 
 > testEnvironment: "jsdom"
-
-## Usage
-

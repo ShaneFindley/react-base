@@ -1,7 +1,7 @@
 import { Button, Container, Paper, Typography } from "@mui/material";
 import Heading from "../common/heading/heading";
 
-import image from '../axios/logo.svg';
+import image from './logo.svg';
 
 export default function Jest() {
     return <Container style={{ paddingTop: 10 }}>
@@ -10,21 +10,14 @@ export default function Jest() {
             title='Jest'
             links={
                 <>
-                    <Button color='primary' variant='contained' href='https://axios-http.com/' target='_blank'>Axios</Button>
+                    <Button color='primary' variant='contained' href='https://jestjs.io/' target='_blank'>Jest</Button>
                 </>
             }
         >
             <Typography variant="body2" color="text.secondary">
-                Axios is a simple promise based HTTP client for the browser and node.js. Axios provides a simple to 
-                use library in a small package with a very extensible interface.
+                Jest is a delightful JavaScript Testing Framework with a focus on simplicity. 
+                It works with projects using: Babel, TypeScript, Node, React, Angular, Vue and more!
             </Typography>
         </Heading>
-
-        <br />
-        <br />
-
-        <Paper>
-            <div />
-        </Paper>
     </Container>;
 }
