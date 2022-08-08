@@ -1,23 +1,28 @@
-Install
-
-npm i --save-dev jest babel-jest
-npm i --save-dev ts-node
-npm i --save-dev @babel/preset-typescript ts-jest @types/jest
-npm i --save-dev @testing-library/jest-dom @testing-library/react @testing-library/user-event jest-resolve jest-watch-typeahead
-
-Hook testing:
-npm install --save-dev @testing-library/react-hooks
-
-jest --init
-
-npm i --save-dev jest-environment-jsdom
+# Jest & Testing
 
 
-"@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "babel-jest": "^27.4.2",
-    "jest": "^27.4.3",
-    "jest-resolve": "^27.4.2",
-    "jest-watch-typeahead": "^1.0.0",
+
+## Installation
+
+Jest has a number of related dependencies which are required to create a working test environment, below are a selection of those currently being used for use with typescript and jest using v8.
+
+
+> npm i --save-dev jest babel-jest
+
+>npm i --save-dev ts-node @babel/preset-typescript ts-jest @types/jest
+
+> npm i --save-dev @testing-library/jest-dom @testing-library/react @testing-library/user-event jest-resolve jest-watch-typeahead
+
+To then setup jest run:
+> jest --init
+
+For running tests against react we need to use jsdom as the test environment, this is no longer included as part of jest. 
+
+> npm i --save-dev jest-environment-jsdom
+
+jest.config.ts will also need to be updated to use jsdom as the testing environment.
+
+> testEnvironment: "jsdom"
+
+## Usage
+

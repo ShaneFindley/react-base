@@ -6,6 +6,7 @@ import HomePage from "../home-page";
 import Error404Page from '../error-404-page/error-404-page';
 import MaterialUIPage from "../material-ui";
 import AxiosPage from "../axios";
+import JestPage from "../jest";
 
 export default function Root() {
 
@@ -18,6 +19,9 @@ export default function Root() {
                     </MenuItem>
                     <MenuItem>
                         <Link to={FormikForm.path}>Formik</Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to={JestPage.path}>Jest</Link>
                     </MenuItem>
                     <MenuItem>
                         <Link to={MaterialUIPage.path}>Material UI</Link>
@@ -34,6 +38,10 @@ export default function Root() {
                         <Route
                             path={FormikForm.path}
                             element={<FormikForm.LazyRender />}
+                        />
+                        <Route
+                            path={JestPage.path}
+                            element={<JestPage.LazyRender />}
                         />
                         <Route
                             path={MaterialUIPage.path}
