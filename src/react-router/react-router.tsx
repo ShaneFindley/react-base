@@ -1,10 +1,9 @@
 
 import { Button, Container, Typography } from "@mui/material";
+import Code from "../common/code-block/code";
 import Heading from "../common/heading/heading";
 
 import image from './logo.png';
-import Code from '../common/code-block/Code';
-
 export default function ReactRouterPage() {
 
     return <Container style={{ paddingTop: 10 }}>
