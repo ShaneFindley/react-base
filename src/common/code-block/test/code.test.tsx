@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import Code from '../scode';
+import Code from '../code';
 
 jest.mock('prismjs/themes/prism-okaidia.min.css', () => ({
     __esModule: true,
