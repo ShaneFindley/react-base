@@ -7,6 +7,7 @@ import Error404Page from '../error-404-page/error-404-page';
 import MaterialUIPage from "../material-ui";
 import AxiosPage from "../axios";
 import JestPage from "../jest";
+import ReactRouter from ".";
 
 export default function Root() {
 
@@ -25,6 +26,9 @@ export default function Root() {
                     </MenuItem>
                     <MenuItem>
                         <Link to={MaterialUIPage.path}>Material UI</Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link to={ReactRouter.path}>React Router</Link>
                     </MenuItem>
                 </MenuList>
             </Grid>
@@ -50,6 +54,10 @@ export default function Root() {
                         <Route
                             path={HomePage.path}
                             element={<HomePage.LazyRender />}
+                        />
+                        <Route
+                            path={ReactRouter.path}
+                            element={<ReactRouter.LazyRender />}
                         />
                         <Route element={<Error404Page />} />
                     </Routes>
