@@ -70,43 +70,30 @@ declare module '*.module.sass' {
   export default classes;
 }
 
-// declare module '@ckeditor/ckeditor5-react' {
-//   import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-//   // import ClassicEditorConfiguration from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
-//   import Context from '@ckeditor/ckeditor5-core/src/context';
-//   import Event from '@ckeditor/ckeditor5-utils/src/eventinfo'
-//   import { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig'
-//   import CodeBlock from "@ckeditor/ckeditor5-code-block/src/codeblock";
-//   import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
-//   import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-//   import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
-//   import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
-//   import * as React from 'react';
+declare module '@ckeditor/ckeditor5-react' {
+  import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+  import Context from '@ckeditor/ckeditor5-core/src/context';
+  import Event from '@ckeditor/ckeditor5-utils/src/eventinfo'
+  import { EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig'
+  import CodeBlock from "@ckeditor/ckeditor5-code-block/src/codeblock";
+  import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
+  import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+  import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
+  import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
+  import * as React from 'react';
 
-//   // ClassicEditorConfiguration
-//   //   .create(document.querySelector('#editor') as any, {
-//   //     plugins: [CodeBlock, Essentials, Paragraph, Bold, Italic],
-//   //     toolbar: ['bold', 'italic', 'block-quote']
-//   //   })
-//   //   .then(editor => {
-//   //     console.log('Editor was initialized', editor);
-//   //   })
-//   //   .catch(error => {
-//   //     console.error(error.stack);
-//   //   });
-
-//   const CKEditor: React.FunctionComponent<{
-//     disabled?: boolean;
-//     editor: typeof ClassicEditor;
-//     data?: string;
-//     id?: string;
-//     config?: EditorConfig;
-//     rows?: number
-//     onReady?: (editor: ClassicEditor) => void;
-//     onChange?: (event: Event, editor: ClassicEditor) => void;
-//     onBlur?: (event: Event, editor: ClassicEditor) => void;
-//     onFocus?: (event: Event, editor: ClassicEditor) => void;
-//     onError?: (event: Event, editor: ClassicEditor) => void;
-//   }>
-//   export { CKEditor };
-// }
+  const CKEditor: React.FunctionComponent<{
+    disabled?: boolean;
+    editor: typeof ClassicEditor;
+    data?: string;
+    id?: string;
+    config?: EditorConfig;
+    rows?: number
+    onReady?: (editor: ClassicEditor) => void;
+    onChange?: (event: Event, editor: ClassicEditor) => void;
+    onBlur?: (event: Event, editor: ClassicEditor) => void;
+    onFocus?: (event: Event, editor: ClassicEditor) => void;
+    onError?: (event: Event, editor: ClassicEditor) => void;
+  }>
+  export { CKEditor };
+}
