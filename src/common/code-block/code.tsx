@@ -15,7 +15,7 @@ export default function Code({ code, language, title }: { code: string, language
     }, []);
     return (
         <div className="Code">
-            { title && <Typography variant='h2' >{title}</Typography> }
+            { title && <Typography variant='h5' >{title}</Typography> }
             <pre>
                 <code className={`language-${language}`}>{code}</code>
             </pre>

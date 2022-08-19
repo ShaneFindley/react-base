@@ -56,6 +56,7 @@ Click on the links below to view additional information about these packages
 * [formik & yup](src/formik/README.md)
 * [Matieral UI](src/material-ui/README.md)
 * [Jest](src/jest/README.md)
+* [Prismjs](src/prismjs/README.md)
 
 To be added:
 * ~~moment~~

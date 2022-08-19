@@ -1,6 +1,4 @@
 const path = require('path');
-// const { styles } = require('@ckeditor/ckeditor5-dev-utils');
-// const CKEditorWebpackPlugin = require('@ckeditor/ckeditor5-dev-webpack-plugin');
 
 /*We are basically telling webpack to take index.js from entry. Then check for all file extensions in resolve. 
 After that apply all the rules in module.rules and produce the output and place it in main.js in the public folder.*/
@@ -89,37 +87,6 @@ module.exports = {
                 test: /\.css$/i,
                 use: ["style-loader", "css-loader"],
             }
-            // ckEditor options.
-            // {
-            //     test: /ckeditor5-[^/\\]+[/\\]theme[/\\]icons[/\\][^/\\]+\.svg$/,
-            //     use: ['raw-loader']
-            // },
-            // {
-            //     test: /ckeditor5-[^/\\]+[/\\]theme[/\\].+\.css$/,
-            //     use: [
-            //         {
-            //             loader: 'style-loader',
-            //             options: {
-            //                 injectType: 'singletonStyleTag',
-            //                 attributes: {
-            //                     'data-cke': true
-            //                 }
-            //             }
-            //         },
-            //         'css-loader',
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 postcssOptions: styles.getPostCssConfig({
-            //                     themeImporter: {
-            //                         themePath: require.resolve('@ckeditor/ckeditor5-theme-lark')
-            //                     },
-            //                     minify: true
-            //                 })
-            //             }
-            //         }
-            //     ]
-            // }
         ]
     }
 }

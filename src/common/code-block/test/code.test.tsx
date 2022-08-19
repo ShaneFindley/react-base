@@ -15,4 +15,9 @@ describe('code-block', () => {
         const result = render(<Code code='<Test></Test>' language='tsx' />);
         expect(result.container.innerHTML).toEqual('<div class="Code"><pre class="language-tsx" tabindex="0"><code class="language-tsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Test</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Test</span></span><span class="token punctuation">&gt;</span></span></code></pre></div>');
     })
+
+    it('should render html data', () => {
+        const result = render(<Code code='<Test></Test>' language='html' />);
+        expect(result.container.innerHTML).toEqual('<div class="Code"><pre class="language-html" tabindex="0"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Test</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Test</span><span class="token punctuation">&gt;</span></span></code></pre></div>');
+    })
 })
