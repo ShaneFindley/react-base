@@ -10,7 +10,7 @@ jobs:
     name: SonarCloud
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0 
       - name: Install dependencies
@@ -25,5 +25,4 @@ jobs:
             -Dsonar.projectKey=ShaneFindley_react-base
             -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
