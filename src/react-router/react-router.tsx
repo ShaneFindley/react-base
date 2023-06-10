@@ -5,6 +5,14 @@ import Heading from '../common/heading/heading'
 
 import image from './logo.png'
 export default function ReactRouterPage () {
+
+/(a+)+$/.test(
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+"aaaaaaaaaaaaaaa!"
+);
+
   return <Container style={{ paddingTop: 10 }}>
         <Heading
             imgUrl={image}
