@@ -5,7 +5,7 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=ShaneFindley_react-base&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=ShaneFindley_react-base)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ShaneFindley_react-base&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ShaneFindley_react-base)
 
-## Installation
+## Installation 
 
 ```
 npm i --save-dev webpack 
