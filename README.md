@@ -12,7 +12,7 @@ npm i --save-dev webpack awdad
                  webpack-cli 
                  webpack-dev-server
 npm i --save-dev typescript 
-                 tslint 
+                 tslint asda
                  ts-loader
 npm i --save-dev babel-loader 
                  @babel/preset-env 
