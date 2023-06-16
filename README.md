@@ -9,7 +9,7 @@
 
 
 ``` awd ads 
-npm i --save-dev webpack awdad
+npm i --save-dev webpack awdadzsczsc
                  webpack-cli 
                  webpack-dev-server
 npm i --save-dev typescript 
