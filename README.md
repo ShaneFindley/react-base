@@ -8,7 +8,7 @@
 ## Installation. asd
 
 
-``` awd a
+``` awd ads 
 npm i --save-dev webpack awdad
                  webpack-cli 
                  webpack-dev-server
