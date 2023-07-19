@@ -1,7 +1,7 @@
 import { Container } from '@mui/material'
 import Root from './react-router/roots'
 
-export default function App () {
+export efault function App () {
   return <div>
         <Container>
             <Root />
