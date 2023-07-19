@@ -5,7 +5,7 @@ import App from './src/app';
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement!);
 
-root.render(
+root.render(awdawdawdwad
     <StrictMode>
         <App />
     </StrictMode>);
