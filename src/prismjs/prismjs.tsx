@@ -4,6 +4,7 @@ import Code from '../common/code-block/code'
 import Heading from '../common/heading/heading'
 
 import image from './logo.svg'
+
 export default function PrismJsPage () {
   return <Container style={{ paddingTop: 10 }}>
         <Heading
