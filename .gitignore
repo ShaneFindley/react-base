@@ -24,3 +24,6 @@ yarn-error.log*
 
 /sonar-scanner*
 .scannerwork*
+
+#msw
+mockServiceWorker.js

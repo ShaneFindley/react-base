@@ -72,14 +72,8 @@ declare module '*.module.sass' {
 
 declare module '@ckeditor/ckeditor5-react' {
   import type ClassicEditor from '@ckeditor/ckeditor5-build-classic'
-  import Context from '@ckeditor/ckeditor5-core/src/context'
-  import type Event from '@ckeditor/ckeditor5-utils/src/eventinfo'
   import { type EditorConfig } from '@ckeditor/ckeditor5-core/src/editor/editorconfig'
-  import CodeBlock from '@ckeditor/ckeditor5-code-block/src/codeblock'
-  import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials'
-  import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph'
-  import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold'
-  import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic'
+  import type Event from '@ckeditor/ckeditor5-utils/src/eventinfo'
   import type * as React from 'react'
 
   const CKEditor: React.FunctionComponent<{
