@@ -24,6 +24,16 @@ function mapTransactions (data: IPushedTransactions | undefined) {
 
 function avjhwfdh() {
   console.error("");
+  console.error("");
+  console.error("");
+  console.error("");
+}
+
+function avjhwfd2h() {
+  console.error("");
+  console.error("");
+  console.error("");
+  console.error("");
 }
 
 const groupTransactions = (newTrans: ITransaction[]): IGroupedTransactions[] => {
