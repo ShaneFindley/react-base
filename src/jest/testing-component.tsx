@@ -5,6 +5,10 @@ const STATUS = {
   NORMAL: 'normal'
 }
 
+function blah() {
+  console.log("Testing coverage");
+}
+
 export default function TestingComponent ({ func, id, page, children }: { func: () => void, id: string, page: string, children: React.ReactNode }) {
   const [status, setStatus] = useState(STATUS.NORMAL)
 
