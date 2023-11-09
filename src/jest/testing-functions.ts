@@ -22,6 +22,10 @@ function mapTransactions (data: IPushedTransactions | undefined) {
   return []
 }
 
+function avjhwfdh() {
+  console.error("");
+}
+
 const groupTransactions = (newTrans: ITransaction[]): IGroupedTransactions[] => {
   const groupedItems: IGroupedTransactions[] = []
 
