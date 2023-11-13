@@ -1,4 +1,4 @@
-# React App Basic
+# React App Basic 
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ShaneFindley_react-base&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ShaneFindley_react-base)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ShaneFindley_react-base&metric=bugs)](https://sonarcloud.io/summary/new_code?id=ShaneFindley_react-base)
