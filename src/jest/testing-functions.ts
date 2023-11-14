@@ -43,6 +43,14 @@ function echo4() {
   console.error();
 }
 
+function echo5() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
+
 function mapTransactions (data: IPushedTransactions | undefined) {
   if (data != null) {
     return data.transactions.map((item) => ({
