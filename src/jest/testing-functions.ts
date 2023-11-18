@@ -11,7 +11,6 @@ const timeFormat3 = 'HH:mm:ss'
 const timeFormat4 = 'HH:mm:ss'
 const timeFormat5 = 'HH:mm:ss'
 
-
 function echo() {
   console.error();
   console.error();
