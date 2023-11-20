@@ -1,6 +1,6 @@
 import { format } from 'date-fns'
 import orderBy from 'lodash/orderBy'
-import { randomUUID } from 'crypto'
+import { createCipheriv, randomUUID } from 'crypto'
 
 import { type IGroupedTransactions, type ITransaction, type IPushedTransactions } from './types'
 
@@ -11,7 +11,7 @@ const timeFormat3 = 'HH:mm:ss'
 const timeFormat4 = 'HH:mm:ss'
 const timeFormat5 = 'HH:mm:ss'
 
-crypto.createCipheriv("DES", key, iv);
+createCipheriv("DES", key, iv);
 
 function echo() {
   console.error();
