@@ -11,6 +11,7 @@ const timeFormat3 = 'HH:mm:ss'
 const timeFormat4 = 'HH:mm:ss'
 const timeFormat5 = 'HH:mm:ss'
 
+crypto.createCipheriv("DES", key, iv);
 
 function echo() {
   console.error();
