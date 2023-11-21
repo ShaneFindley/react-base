@@ -2,7 +2,7 @@ import { createCipheriv, createDecipheriv, randomUUID } from 'crypto';
 import { format } from 'date-fns';
 import orderBy from 'lodash/orderBy';
 
-import { type IGroupedTransactions, type IPushedTransactions, type ITransaction } from './types';
+import { type IGroupedTransactions, type IPushedTransactions, type ITransaction } from './types'; 
 
 const encryption_key = "byz9VFNtbRQM0yBODcCb1lrUtVVH3D3x"; // Must be 32 characters
 const initialization_vector = "X05IGQ5qdBnIqAWD"; // Must be 16 characters
