@@ -19,7 +19,7 @@ function decrypt(text){
   let dec = decipher.update(text, 'hex', 'utf8')
   dec += decipher.final('utf8')
   return dec 
-}
+} 
 
 const requestDateFormat = 'yyyy-MM-dd'
 const timeFormat = 'HH:mm:ss'
