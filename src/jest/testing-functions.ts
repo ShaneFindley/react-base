@@ -11,7 +11,7 @@ function encrypt(text){
   const cipher = createCipheriv('aes-256-cbc',Buffer.from(encryption_key), Buffer.from(initialization_vector))
   var crypted = cipher.update(text, 'utf8', 'hex')
   crypted += cipher.final('hex')
-  return crypted 
+  return crypted  
 }
 
 function decrypt(text){
