@@ -22,7 +22,7 @@ function mapTransactions (data: IPushedTransactions | undefined) {
   return []
 }
 
-function mapToMessages() {
+export function mapToMessages() {
   console.log("blah");
   console.log("blah");
   console.log("blah");
