@@ -90,7 +90,7 @@ const groupTransactions = (newTrans: ITransaction[]): IGroupedTransactions[] => 
     const orderedTrans = orderBy(newTrans, x => x.soldAt, 'desc')
     for (const tran of orderedTrans) {
       const index = groupedItems.findIndex(x => x.date === tran.soldAt)
-      if (index === -1) {
+      if (index === -1) { 
         groupedItems.push({
           comparisonDate: new Date(tran.soldAt).getTime(),
           date: tran.soldAt,
