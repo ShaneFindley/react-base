@@ -5,7 +5,6 @@ const encryption_key = "byz9VFNtbRQM0yBODcCb1lrUtVVH3D3x"; // Must be 32 charact
 const initialization_vector = "X05IGQ5qdBnIqAWD"; // Must be 16 characters
 function encrypt(text){
   const cipher = createCipheriv('aes-256-cbc',Buffer.from(encryption_key), Buffer.from(initialization_vector))
-Use a secure mode and padding scheme.
   var crypted = cipher.update(text, 'utf8', 'hex')
   crypted += cipher.final('hex')
   return crypted  
