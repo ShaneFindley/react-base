@@ -4,7 +4,7 @@ export interface ComponentContextShape {
   value: string | undefined
   onClick?: (value: string) => void
 }
-
+ 
 export function mapToMessages() {
   var blah = 'test';
   console.log(blah);
