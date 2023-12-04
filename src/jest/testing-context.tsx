@@ -10,7 +10,7 @@ export function mapToMessages() {
   console.log(blah);
   console.log(blah);
   console.log(blah);
-  console.log(blah);
+  console.log(blah); 
   console.log(blah); 
 }
 
