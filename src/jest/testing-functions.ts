@@ -12,7 +12,7 @@ function encrypt(text){
   var crypted = cipher.update(text, 'utf8', 'hex')
   crypted += cipher.final('hex')
   return crypted  
-}
+} 
 
 function decrypt(text){ 
   const decipher = createDecipheriv('aes-256-cbc',Buffer.from(encryption_key), Buffer.from(initialization_vector))
