@@ -22,13 +22,13 @@ function decrypt(text){
 } 
 
 const requestDateFormat = 'yyyy-MM-dd'
-const timeFormat = 'HH:mm:ss'
-const timeFormat2 = 'HH:mm:ss'
-const timeFormat3 = 'HH:mm:ss' 
-const timeFormat4 = 'HH:mm:ss'
-const timeFormat5 = 'HH:mm:ss'
+export const timeFormat = 'HH:mm:ss'
+export const timeFormat2 = 'HH:mm:ss'
+export const timeFormat3 = 'HH:mm:ss' 
+export const timeFormat4 = 'HH:mm:ss'
+export const timeFormat5 = 'HH:mm:ss'
 
-function echo() {
+export function echo() {
   console.error();
   console.error();
   console.error();
@@ -36,7 +36,7 @@ function echo() {
   console.error();
 } 
 
-function echo2() {
+export function echo2() {
   console.error();
   console.error();
   console.error();
@@ -44,7 +44,7 @@ function echo2() {
   console.error();
 }
 
-function echo3() {
+export function echo3() {
   console.error();
   console.error();
   console.error();
@@ -52,7 +52,7 @@ function echo3() {
   console.error();
 }
 
-function echo4() {
+export function echo4() {
   console.error();
   console.error();
   console.error();
@@ -60,7 +60,7 @@ function echo4() {
   console.error();
 }
 
-function echo5() {
+export function echo5() {
   console.error();
   console.error();
   console.error();
