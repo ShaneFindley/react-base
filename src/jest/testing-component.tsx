@@ -15,11 +15,11 @@ export function echo() {
 } 
 
 export function echo2() {
-  console.error();
-  console.error();
-  console.error();
-  console.error();
-  console.error();
+  console.log();
+  console.log();
+  console.log();
+  console.log();
+  console.log();
 }
 
 export function echo3() {
