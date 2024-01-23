@@ -1,11 +1,72 @@
-import { format } from 'date-fns'
-import orderBy from 'lodash/orderBy'
-import { randomUUID } from 'crypto'
+import { createCipheriv, createDecipheriv, randomUUID } from 'crypto';
+import { format } from 'date-fns';
+import orderBy from 'lodash/orderBy';
 
-import { type IGroupedTransactions, type ITransaction, type IPushedTransactions } from './types'
+import { type IGroupedTransactions, type IPushedTransactions, type ITransaction } from './types'; 
+
+const encryption_key = "byz9VFNtbRQM0yBODcCb1lrUtVVH3D3x"; // Must be 32 characters
+const initialization_vector = "X05IGQ5qdBnIqAWD"; // Must be 16 characters
+
+function encrypt(text){
+  const cipher = createCipheriv('aes-256-cbc',Buffer.from(encryption_key), Buffer.from(initialization_vector)) 
+  var crypted = cipher.update(text, 'utf8', 'hex')
+  crypted += cipher.final('hex')
+  return crypted 
+} 
+
+function decrypt(text){ 
+  const decipher = createDecipheriv('aes-256-cbc',Buffer.from(encryption_key), Buffer.from(initialization_vector))
+  let dec = decipher.update(text, 'hex', 'utf8')
+  dec += decipher.final('utf8') 
+  return dec 
+} 
 
 const requestDateFormat = 'yyyy-MM-dd'
-const timeFormat = 'HH:mm:ss'
+export const timeFormat = 'HH:mm:ss'
+export const timeFormat2 = 'HH:mm:ss'
+export const timeFormat3 = 'HH:mm:ss' 
+export const timeFormat4 = 'HH:mm:ss'
+export const timeFormat5 = 'HH:mm:ss'
+
+export function echo() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+} 
+
+export function echo2() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
+
+export function echo3() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
+
+export function echo4() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
+
+export function echo5() {
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+  console.error();
+}
 
 function mapTransactions (data: IPushedTransactions | undefined) {
   if (data != null) {
@@ -29,7 +90,7 @@ const groupTransactions = (newTrans: ITransaction[]): IGroupedTransactions[] => 
     const orderedTrans = orderBy(newTrans, x => x.soldAt, 'desc')
     for (const tran of orderedTrans) {
       const index = groupedItems.findIndex(x => x.date === tran.soldAt)
-      if (index === -1) {
+      if (index === -1) { 
         groupedItems.push({
           comparisonDate: new Date(tran.soldAt).getTime(),
           date: tran.soldAt,

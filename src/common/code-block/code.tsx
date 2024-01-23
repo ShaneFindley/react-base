@@ -11,7 +11,7 @@ import 'prismjs/themes/prism-okaidia.min.css'
 
 export default function Code ({ code, language, title }: { code: string, language: string, title?: string }) {
   useEffect(() => {
-    Prism.highlightAll()
+    Prism.highlightAll() 
   }, [])
   return (
         <div className="Code">
