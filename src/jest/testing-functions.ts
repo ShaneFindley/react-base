@@ -22,6 +22,8 @@ function mapTransactions (data: IPushedTransactions | undefined) {
   return []
 }
 
+console.log("blah");
+
 const groupTransactions = (newTrans: ITransaction[]): IGroupedTransactions[] => {
   const groupedItems: IGroupedTransactions[] = []
 
