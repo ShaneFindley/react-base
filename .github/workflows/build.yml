@@ -60,8 +60,8 @@ jobs:
        run: npm install
      - name: Test and coverage
        run: npm run test --coverage
-     - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@master
+     - name: SonarQube Scan
+       uses: sonarsource/sonarqube-scan-action@master
         # with:
         #   args: >
         #     -Dsonar.organization=shanefindley
