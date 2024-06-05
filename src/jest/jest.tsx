@@ -10,7 +10,7 @@ export default function Jest () {
             title='Jest'
             links={
                 <>
-                    <Button color='primary' variant='contained' href='https://jestjs.io/' target='_blank'>Jest</Button>
+                    <Button color='primary' variant='contained' href='https://jestjs.io/' target='_blank'>Jest content</Button>
                 </>
             }
         >
