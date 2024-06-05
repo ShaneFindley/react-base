@@ -12,7 +12,7 @@ export default function PrismJsPage () {
             title='Prism.js'
             links={
                 <>
-                    <Button color='primary' variant='contained' href='https://prismjs.com/' target='_blank'>Prismjs</Button>
+                    <Button color='primary' variant='contained' href='https://prismjs.com/' target='_blank'>Prismjs content</Button>
                 </>
             }
         >
