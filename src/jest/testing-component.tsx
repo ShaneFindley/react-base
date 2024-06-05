@@ -17,7 +17,7 @@ export default function TestingComponent ({ func, id, page, children }: { func: 
   }
 
   return (
-        <a
+        <a 
             id={id}
             className={status}
             href={page || '#'}
