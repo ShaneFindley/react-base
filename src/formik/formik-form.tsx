@@ -4,6 +4,7 @@ import Heading from '../common/heading/heading'
 import FormikImg from './hero6.webp'
 import DemoForm from './demo-form'
 
+
 export default function FormikForm () {
   return <Container style={{ paddingTop: 10 }}>
         <Heading
