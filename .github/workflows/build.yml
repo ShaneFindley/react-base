@@ -57,6 +57,7 @@ jobs:
        env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ2 }}
          SONARCLOUD_URL: ${{ secrets.SONAR_HOST_URL_DEV19 }} 
+         API_BASE_URL: ${{ secrets.SONAR_HOST_API_DEV19 }}
          
  sonarqube-server_local:
    name: SonarQube_Local
