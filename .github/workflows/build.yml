@@ -6,76 +6,11 @@ on:
  pull_request:
   types: [opened, synchronize, reopened]
 jobs:
- sonarcloud:
-   name: SonarCloud
+ sonarqube-cloud:
+   name: SonarQube
    runs-on: ubuntu-latest
    steps:
-     - uses: actions/checkout@v3
-       with:
-         fetch-depth: 0
-     - name: Install dependencies
-       run: npm install
-     - name: Test and coverage
-       run: npm run test --coverage
-     - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@master
-        # with:
-        #   args: >
-        #     -Dsonar.organization=shanefindley
-        #     -Dsonar.projectKey=ShaneFindley_react-base
-        #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-       env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-         
- sonarcloud_squad2:
-   name: SonarCloud_SQ2
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v3
-       with:
-         fetch-depth: 0
-     - name: Install dependencies
-       run: npm install
-     - name: Test and coverage
-       run: npm run test --coverage
-     - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@master
-        # with:
-        #   args: >
-        #     -Dsonar.organization=shanefindley
-        #     -Dsonar.projectKey=ShaneFindley_react-base
-        #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-       env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ2 }}
-         SONARCLOUD_URL: "https://squad-2-core.sc-dev.io"
-         
- sonarcloud_dev19:
-   name: SonarCloud_SQC-Dev19
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v3
-       with:
-         fetch-depth: 0
-     - name: Install dependencies
-       run: npm install
-     - name: Test and coverage
-       run: npm run test --coverage
-     - name: SonarCloud Scan
-       uses: SonarSource/sonarcloud-github-action@master
-        # with:
-        #   args: >
-        #     -Dsonar.organization=shanefindley
-        #     -Dsonar.projectKey=ShaneFindley_react-base
-        #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-       env:
-         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ2 }}
-         SONARCLOUD_URL: ${{ secrets.SONAR_HOST_URL_DEV19 }} 
-         
- sonarqube_local:
-   name: SonarQube_Local
-   runs-on: ubuntu-latest
-   steps:
-     - uses: actions/checkout@v2
+     - uses: actions/checkout@v4
        with:
          fetch-depth: 0
      - name: Install dependencies
@@ -83,12 +18,59 @@ jobs:
      - name: Test and coverage
        run: npm run test --coverage
      - name: SonarQube Scan
-       uses: sonarsource/sonarqube-scan-action@master
-        # with:
-        #   args: >
-        #     -Dsonar.organization=shanefindley
-        #     -Dsonar.projectKey=ShaneFindley_react-base
-        #     -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+       uses: SonarSource/sonarqube-scan-action@v5
+       env:
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+         
+         
+ sonarqube-cloud_squad2:
+   name: SonarQube_SQC-Squad2
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v4
+       with:
+         fetch-depth: 0
+     - name: Install dependencies
+       run: npm install
+     - name: Test and coverage
+       run: npm run test --coverage
+     - name: SonarQube Scan
+       uses: SonarSource/sonarqube-scan-action@v5
+       env:
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ2 }}
+         SONARCLOUD_URL: "https://squad-2-core.sc-dev.io"
+         
+ sonarqube-cloud_dev19:
+   name: SonarCloud_SQC-Dev19
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v4
+       with:
+         fetch-depth: 0
+     - name: Install dependencies
+       run: npm install
+     - name: Test and coverage
+       run: npm run test --coverage
+     - name: SonarQube Scan
+       uses: SonarSource/sonarqube-scan-action@v5
+       env:
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ2 }}
+         SONARCLOUD_URL: ${{ secrets.SONAR_HOST_URL_DEV19 }} 
+         
+ sonarqube-server_local:
+   name: SonarQube_Local
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@v4
+       with:
+         fetch-depth: 0
+     - name: Install dependencies
+       run: npm install
+     - name: Test and coverage
+       run: npm run test --coverage
+     - name: SonarQube Scan
+       uses: SonarSource/sonarqube-scan-action@v5
        env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_SQ_LOCAL }}
          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL_SQ_LOCAL }}
