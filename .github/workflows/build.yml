@@ -37,8 +37,7 @@ jobs:
        uses: SonarSource/sonarqube-scan-action@v6
        env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_STAGING }}
-         SONAR_HOST_URL: ${{ vars.SONAR_TOKEN_STAGING_URL }}
-        #  SONARCLOUD_URL: ${{ secrets.SONAR_TOKEN_STAGING_URL }}
+         SONAR_HOST_URL: ${{ secrets.SONAR_TOKEN_STAGING_URL }}
        with:
          -Dsonar.organization=shanefindley
          -Dsonar.projectKey=ShaneFindley_react-base
