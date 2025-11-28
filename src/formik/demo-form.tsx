@@ -1,7 +1,10 @@
-import { Field, type FieldAttributes, Formik } from 'formik'
 import { Grid, MenuItem, TextField } from '@mui/material'
+import { Field, type FieldAttributes, Formik } from 'formik'
 import * as Yup from 'yup'
 import FormikSubmitButton from './formik-submit-button'
+import { Tangle1 } from './tangle'
+
+export const Tangle2 = Tangle1;
 
 export default function DemoForm () {
   return <Formik
