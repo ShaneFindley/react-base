@@ -39,8 +39,9 @@ jobs:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_STAGING }}
          SONAR_HOST_URL: ${{ secrets.SONAR_TOKEN_STAGING_URL }}
        with:
-         -Dsonar.organization=shanefindley
-         -Dsonar.projectKey=ShaneFindley_react-base
+         args: >
+           -Dsonar.organization=shanefindley
+           -Dsonar.projectKey=ShaneFindley_react-base
 
 #  sonarqube-cloud_squad2:
 #    name: SonarQube_SQC-Squad2
