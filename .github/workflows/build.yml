@@ -37,7 +37,11 @@ jobs:
        uses: SonarSource/sonarqube-scan-action@v6
        env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_STAGING }}
-         SONARCLOUD_URL: ${{ secrets.SONAR_TOKEN_STAGING_URL }}
+         SONAR_HOST_URL: ${{ vars.SONAR_TOKEN_STAGING_URL }}
+        #  SONARCLOUD_URL: ${{ secrets.SONAR_TOKEN_STAGING_URL }}
+       with:
+         -Dsonar.organization=shanefindley
+         -Dsonar.projectKey=ShaneFindley_react-base
 
 #  sonarqube-cloud_squad2:
 #    name: SonarQube_SQC-Squad2
