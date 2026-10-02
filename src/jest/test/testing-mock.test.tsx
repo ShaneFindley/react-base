@@ -6,7 +6,7 @@ jest.mock('axios-hooks')
 
 describe('useTestingMock', () => {
   it('should return false', () => {
-    const mock = jest.mocked(mockFn, true) as jest.Mock
+    const mock = jest.mocked(mockFn, { shallow: true }) as jest.Mock
     mock.mockImplementation(() => {
       return [{ data: false, loading: false, error: null, response: undefined }]
     })
@@ -16,7 +16,7 @@ describe('useTestingMock', () => {
   })
 
   it('should return true', () => {
-    const mock = jest.mocked(mockFn, true) as jest.Mock
+    const mock = jest.mocked(mockFn, { shallow: true }) as jest.Mock
     mock.mockImplementation(() => {
       return [{ data: true, loading: false }]
     })

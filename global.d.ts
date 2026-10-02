@@ -55,6 +55,12 @@ declare module '*.svg' {
   export default src
 }
 
+declare module '*.css'
+
+declare module '*.scss'
+
+declare module '*.sass'
+
 declare module '*.module.css' {
   const classes: Readonly<Record<string, string>>
   export default classes
